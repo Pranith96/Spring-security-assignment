@@ -49,23 +49,6 @@ public class StoreServiceImpl implements StoreService {
 	}
 
 	@Override
-	public Store loginUser(String userName, String password) {
-		Optional<Store> userResponse = Optional.empty();
-		logger.info("In service class to login");
-		Store store = getUserDetails(userName);
-		if (passwordEncoder.matches(password, store.getPassword())) {
-			userResponse = userRepository.findByUserNameAndPassword(userName, store.getPassword());
-			logger.info("after login");
-			if (!userResponse.isPresent()) {
-				return null;
-			}
-		} else {
-			return null;
-		}
-		return userResponse.get();
-	}
-
-	@Override
 	public Store getUserDetails(String userName) {
 		logger.info("In service class fetch store");
 		Store userResponse = userRepository.findByUserName(userName);

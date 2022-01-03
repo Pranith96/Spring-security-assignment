@@ -1,7 +1,5 @@
 package com.springbootmvc.a4.service;
 
-import static org.mockito.Mockito.mock;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -11,9 +9,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.springbootmvc.a4.entity.Store;
 import com.springbootmvc.a4.repository.StoreRepository;
@@ -24,22 +24,27 @@ public class StoreServiceImplTest {
 	@InjectMocks
 	StoreServiceImpl storeServiceImpl;
 
+	@Mock
 	StoreRepository storeRepository;
+	
+	@Mock
+	BCryptPasswordEncoder passwordEncoder;
+
 
 	@Before
 	public void setUp() {
-		storeRepository = mock(StoreRepository.class);
 		MockitoAnnotations.initMocks(this);
 	}
-	
+
 	@Test
 	public void testSaveUser() {
 		Store store = new Store();
+		store.setUserId(1);
 		store.setUserName("ABC123");
-		store.setPassword("test");
+		store.setPassword("12345678");
 		Mockito.when(storeRepository.save(store)).thenReturn(store);
 		String storeReponse = storeServiceImpl.saveUser(store);
-		Assert.assertEquals("", storeReponse);
+		Assert.assertEquals("Store data saved successfully", storeReponse);
 
 	}
 
@@ -60,26 +65,13 @@ public class StoreServiceImplTest {
 	}
 
 	@Test
-	public void testLoginUser() {
-		Store store = new Store();
-		store.setUserName("ABC123");
-		store.setPassword("test");
-		Store storeReponse = storeServiceImpl.loginUser(store.getUserName(), store.getPassword());
-		Mockito.when(storeRepository.findByUserNameAndPassword(store.getUserName(), store.getPassword()))
-				.thenReturn(Optional.of(store));
-		Assert.assertEquals(store.getUserName(), storeReponse.getUserName());
-	}
-
-	@Test
 	public void testGetUserByEmail() {
 		Store store = new Store();
 		store.setUserName("ABC123");
 		store.setPassword("test");
 		store.setEmail("ABC@gmail.com");
+		Mockito.when(storeRepository.findByEmail(store.getEmail())).thenReturn(Optional.of(store));
 		Store storeReponse = storeServiceImpl.getUserByEmail(store.getEmail());
-		Mockito.when(storeRepository.findByEmail(store.getEmail()))
-				.thenReturn(Optional.of(store));
 		Assert.assertEquals(store.getUserName(), storeReponse.getUserName());
 	}
-
 }

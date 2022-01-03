@@ -68,7 +68,7 @@
 	color: black;
 	max-width: 80%;
 	margin: auto;
-	height: 605px;
+	height: 400px;
 }
 
 .firsthalf {
@@ -114,14 +114,6 @@
 	vertical-align: middle;
 }
 
-.text-footer {
-	text-align: center;
-	padding: 30px 0;
-	font-family: 'Ubuntu', sans-serif;
-	display: flex;
-	justify-content: center;
-	color: white;
-}
 </style>
 </head>
 <body>
@@ -144,6 +136,8 @@
 			</form:form>
 		</div>
 	</nav>
+	<h2 align = "center">Know your NeighbourHood</h2>
+	<h3 align = "center" >${greeting}</h3>
 	<div class="box-main">
 		<table align="center" border="1" width="50%"
 			class="table table-striped table-bordered">
@@ -167,9 +161,6 @@
 			</tbody>
 		</table>
 	</div>
-	<footer class="background">
-		<p class="text-footer">Copyright ©-All rights are reserved</p>
-	</footer>
 </body>
 </html>
 

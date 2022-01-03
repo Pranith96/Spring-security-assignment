@@ -27,7 +27,7 @@ public class ViewStoreControllerTest {
 
 	@Mock
 	StoreServiceImpl storeServiceImpl;
-
+	
 	@Before
 	public void setUp() throws Exception {
 		MockitoAnnotations.initMocks(this);

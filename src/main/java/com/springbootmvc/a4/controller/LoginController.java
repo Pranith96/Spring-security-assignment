@@ -6,7 +6,11 @@ import javax.servlet.http.HttpSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.springbootmvc.a4.dto.StoreDto;
-import com.springbootmvc.a4.entity.Store;
 import com.springbootmvc.a4.service.StoreService;
 
 @RestController
@@ -27,6 +30,9 @@ public class LoginController {
 	@Autowired
 	StoreService userService;
 
+	@Autowired
+	AuthenticationManager authentication;
+
 	@GetMapping("/login/page")
 	public ModelAndView loadLoginPage() {
 		ModelAndView model = new ModelAndView();
@@ -36,27 +42,32 @@ public class LoginController {
 		return model;
 	}
 
-	@PreAuthorize("hasAuthority('ROLE_USER') or hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_MODERATOR')")
 	@PostMapping("/login/check")
 	public ModelAndView loginStore(@ModelAttribute StoreDto userDto, HttpServletRequest request) throws Exception {
 		HttpSession session = request.getSession();
-		logger.info("before calling Service for login");
-		Store userResponse = userService.loginUser(userDto.getUserName(), userDto.getPassword());
-		logger.info("After calling Service for login");
-		if (null == userResponse) {
+		String userName = userDto.getUserName();
+		String password = userDto.getPassword();
+		logger.info("Before login");
+		try {
+			Authentication auth = authentication
+					.authenticate(new UsernamePasswordAuthenticationToken(userName, password));
+			SecurityContextHolder.getContext().setAuthentication(auth);
+			logger.info("After login");
+			ModelAndView model = new ModelAndView();
+			String greeting = "Welcome " + userName + "..!!";
+			model.addObject("response", "Successfully LoggedIn" + " " + userName);
+			model.setViewName("loginsuccess");
+			session.setAttribute("greeting", greeting);
+			session.setAttribute("userName", userName);
+			return model;
+		} catch (BadCredentialsException ex) {
+			logger.info("Bad creddentials: ", ex.getMessage());
 			ModelAndView model = new ModelAndView();
 			StoreDto user = new StoreDto();
 			model.addObject("user", user);
 			model.addObject("response", "Login Failed. Please Enter Valid credentials");
+			model.addObject("exception", ex.getMessage());
 			model.setViewName("failedlogin");
-			return model;
-		} else {
-			ModelAndView model = new ModelAndView();
-			String greeting = "Welcome " + userResponse.getName() + "..!!";
-			model.addObject("response", "Successfully LoggedIn" + " " + userResponse.getName());
-			model.setViewName("loginsuccess");
-			session.setAttribute("greeting", greeting);
-			session.setAttribute("userName", userResponse.getUserName());
 			return model;
 		}
 	}

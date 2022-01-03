@@ -8,8 +8,6 @@ public interface StoreService {
 
 	String saveUser(Store store);
 
-	Store loginUser(String userName, String password);
-
 	List<Store> showAllUser();
 
 	Store getUserDetails(String userName);
