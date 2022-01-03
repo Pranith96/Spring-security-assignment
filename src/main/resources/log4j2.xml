@@ -31,7 +31,7 @@
         </Root>
 
         <!-- LOG "com.baeldung*" at TRACE level -->
-        <Logger name="com.springbootmvc.a4" level="trace"></Logger>
+        <Logger name="com.springbootmvc.a5" level="trace"></Logger>
     </Loggers>
 
 </Configuration>

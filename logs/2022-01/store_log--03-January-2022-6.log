@@ -1,1 +1,92 @@
-2022-01-03 12:39:56,729 INFO c.s.a.s.StoreServiceImpl [main] In service class save method
+2022-01-03 16:21:37,607 INFO o.s.b.StartupInfoLogger [restartedMain] Starting Assignment4SpringBootMvcJpadbApplication on HYDLPT-2GMX5 with PID 14204 (C:\Users\ramannpr\Downloads\Assignment4-SpringBootMvcJPADB\target\classes started by ramannpr in C:\Users\ramannpr\Downloads\Assignment4-SpringBootMvcJPADB)
+2022-01-03 16:21:37,613 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-01-03 16:21:37,613 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-01-03 16:21:37,669 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-03 16:21:37,673 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-03 16:21:38,210 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-01-03 16:21:38,298 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 80ms. Found 2 JPA repository interfaces.
+2022-01-03 16:21:38,603 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2adc9f49' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-03 16:21:38,609 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-03 16:21:39,217 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 1210 (http)
+2022-01-03 16:21:39,225 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-1210"]
+2022-01-03 16:21:39,226 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-01-03 16:21:39,226 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-01-03 16:21:39,228 INFO o.a.j.l.DirectJDKLog [restartedMain] Loaded Apache Tomcat Native library [1.2.27] using APR version [1.7.0].
+2022-01-03 16:21:39,228 INFO o.a.j.l.DirectJDKLog [restartedMain] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-01-03 16:21:39,228 INFO o.a.j.l.DirectJDKLog [restartedMain] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-01-03 16:21:39,230 INFO o.a.j.l.DirectJDKLog [restartedMain] OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+2022-01-03 16:21:39,438 INFO o.a.j.l.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-01-03 16:21:39,447 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-01-03 16:21:39,447 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1774 ms
+2022-01-03 16:21:39,590 INFO o.s.s.c.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-03 16:21:39,634 INFO o.h.j.i.u.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-03 16:21:39,674 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-03 16:21:39,681 INFO o.h.Version [task-1] HHH000412: Hibernate ORM core version 5.4.21.Final
+2022-01-03 16:21:39,841 INFO o.h.a.c.r.j.JavaReflectionManager [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-01-03 16:21:39,932 INFO c.z.h.HikariDataSource [task-1] HikariPool-1 - Starting...
+2022-01-03 16:21:39,932 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@357dd30a, org.springframework.security.web.context.SecurityContextPersistenceFilter@64b10dc6, org.springframework.security.web.header.HeaderWriterFilter@12f2fd3f, org.springframework.security.web.csrf.CsrfFilter@357c1672, org.springframework.security.web.authentication.logout.LogoutFilter@56c5fcdd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4d6cbf8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@450e30c9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@734e5972, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a2e15c2, org.springframework.security.web.session.SessionManagementFilter@1fb0a022, org.springframework.security.web.access.ExceptionTranslationFilter@13d50742, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@51830aad]
+2022-01-03 16:21:40,262 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-01-03 16:21:40,279 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-1210"]
+2022-01-03 16:21:40,312 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 1210 (http) with context path ''
+2022-01-03 16:21:40,314 INFO o.s.d.r.c.DeferredRepositoryInitializationListener [restartedMain] Triggering deferred initialization of Spring Data repositories…
+2022-01-03 16:21:40,613 INFO c.z.h.HikariDataSource [task-1] HikariPool-1 - Start completed.
+2022-01-03 16:21:40,627 INFO o.h.d.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-01-03 16:21:41,275 DEBUG o.h.e.j.s.SqlStatementLogger [task-1] alter table users_roles add constraint FKj6m8fwv7oqv74fcehir1a9ffy foreign key (role_id) references roles (role_id)
+2022-01-03 16:21:41,332 DEBUG o.h.e.j.s.SqlStatementLogger [task-1] alter table users_roles add constraint FKgd3iendaoyh04b95ykqise6qh foreign key (user_id) references user (user_id)
+2022-01-03 16:21:41,362 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-03 16:21:41,368 INFO o.s.o.j.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-03 16:21:41,610 INFO o.s.d.r.c.DeferredRepositoryInitializationListener [restartedMain] Spring Data repositories initialized!
+2022-01-03 16:21:41,615 INFO o.s.b.StartupInfoLogger [restartedMain] Started Assignment4SpringBootMvcJpadbApplication in 4.266 seconds (JVM running for 4.952)
+2022-01-03 16:21:44,719 INFO o.a.j.l.DirectJDKLog [http-nio-1210-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-03 16:21:44,719 INFO o.s.w.s.FrameworkServlet [http-nio-1210-exec-2] Initializing Servlet 'dispatcherServlet'
+2022-01-03 16:21:44,724 INFO o.s.w.s.FrameworkServlet [http-nio-1210-exec-2] Completed initialization in 5 ms
+2022-01-03 16:21:44,819 INFO c.s.a.s.SecureUserDetailsServiceImpl [http-nio-1210-exec-2] in  userdetails service
+2022-01-03 16:21:44,990 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-2] select store0_.user_id as user_id1_1_, store0_.email as email2_1_, store0_.localities as localiti3_1_, store0_.name as name4_1_, store0_.password as password5_1_, store0_.phone as phone6_1_, store0_.user_name as user_nam7_1_ from user store0_ where store0_.user_name=?
+2022-01-03 16:21:45,018 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-2] select role0_.user_id as user_id1_2_0_, role0_.role_id as role_id2_2_0_, role1_.role_id as role_id1_0_1_, role1_.user_role as user_rol2_0_1_ from users_roles role0_ inner join roles role1_ on role0_.role_id=role1_.role_id where role0_.user_id=?
+2022-01-03 16:21:49,182 INFO c.s.a.s.RoleConvertor [http-nio-1210-exec-3] before calling role converter
+2022-01-03 16:21:49,187 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-3] select role0_.role_id as role_id1_0_, role0_.user_role as user_rol2_0_ from roles role0_ where role0_.user_role=?
+2022-01-03 16:21:49,191 INFO c.s.a.s.RoleConvertor [http-nio-1210-exec-3] before calling role converter
+2022-01-03 16:21:49,193 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-3] select role0_.role_id as role_id1_0_, role0_.user_role as user_rol2_0_ from roles role0_ where role0_.user_role=?
+2022-01-03 16:21:49,197 INFO c.s.a.s.RoleConvertor [http-nio-1210-exec-3] before calling role converter
+2022-01-03 16:21:49,198 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-3] select role0_.role_id as role_id1_0_, role0_.user_role as user_rol2_0_ from roles role0_ where role0_.user_role=?
+2022-01-03 16:21:52,911 INFO c.s.a.s.RoleConvertor [http-nio-1210-exec-7] before calling role converter
+2022-01-03 16:21:52,913 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-7] select role0_.role_id as role_id1_0_, role0_.user_role as user_rol2_0_ from roles role0_ where role0_.user_role=?
+2022-01-03 16:21:52,919 INFO c.s.a.s.RoleConvertor [http-nio-1210-exec-7] before calling role converter
+2022-01-03 16:21:52,922 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-7] select role0_.role_id as role_id1_0_, role0_.user_role as user_rol2_0_ from roles role0_ where role0_.user_role=?
+2022-01-03 16:21:52,927 INFO c.s.a.s.RoleConvertor [http-nio-1210-exec-7] before calling role converter
+2022-01-03 16:21:52,928 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-7] select role0_.role_id as role_id1_0_, role0_.user_role as user_rol2_0_ from roles role0_ where role0_.user_role=?
+2022-01-03 16:23:31,657 INFO c.s.a.s.RoleConvertor [http-nio-1210-exec-4] before calling role converter
+2022-01-03 16:23:31,660 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-4] select role0_.role_id as role_id1_0_, role0_.user_role as user_rol2_0_ from roles role0_ where role0_.user_role=?
+2022-01-03 16:23:31,662 INFO c.s.a.s.RoleConvertor [http-nio-1210-exec-4] before calling role converter
+2022-01-03 16:23:31,663 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-4] select role0_.role_id as role_id1_0_, role0_.user_role as user_rol2_0_ from roles role0_ where role0_.user_role=?
+2022-01-03 16:23:31,665 INFO c.s.a.s.RoleConvertor [http-nio-1210-exec-4] before calling role converter
+2022-01-03 16:23:31,667 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-4] select role0_.role_id as role_id1_0_, role0_.user_role as user_rol2_0_ from roles role0_ where role0_.user_role=?
+2022-01-03 16:23:31,683 INFO c.s.a.c.AddStoreController [http-nio-1210-exec-4] before calling Service
+2022-01-03 16:23:31,804 INFO c.s.a.s.StoreServiceImpl [http-nio-1210-exec-4] In service class save method
+2022-01-03 16:23:31,825 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-4] insert into user (email, localities, name, password, phone, user_name) values (?, ?, ?, ?, ?, ?)
+2022-01-03 16:23:31,846 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-4] insert into users_roles (user_id, role_id) values (?, ?)
+2022-01-03 16:23:31,851 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-4] insert into users_roles (user_id, role_id) values (?, ?)
+2022-01-03 16:23:31,854 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-4] insert into users_roles (user_id, role_id) values (?, ?)
+2022-01-03 16:23:31,861 INFO c.s.a.c.AddStoreController [http-nio-1210-exec-4] After calling Service
+2022-01-03 16:23:38,829 INFO c.s.a.c.ViewStoreController [http-nio-1210-exec-5] before calling Service to fetch list details
+2022-01-03 16:23:38,830 INFO c.s.a.s.StoreServiceImpl [http-nio-1210-exec-5] In service class fetch all store
+2022-01-03 16:23:38,839 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-5] select store0_.user_id as user_id1_1_, store0_.email as email2_1_, store0_.localities as localiti3_1_, store0_.name as name4_1_, store0_.password as password5_1_, store0_.phone as phone6_1_, store0_.user_name as user_nam7_1_ from user store0_
+2022-01-03 16:23:38,846 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-5] select role0_.user_id as user_id1_2_0_, role0_.role_id as role_id2_2_0_, role1_.role_id as role_id1_0_1_, role1_.user_role as user_rol2_0_1_ from users_roles role0_ inner join roles role1_ on role0_.role_id=role1_.role_id where role0_.user_id=?
+2022-01-03 16:23:38,851 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-5] select role0_.user_id as user_id1_2_0_, role0_.role_id as role_id2_2_0_, role1_.role_id as role_id1_0_1_, role1_.user_role as user_rol2_0_1_ from users_roles role0_ inner join roles role1_ on role0_.role_id=role1_.role_id where role0_.user_id=?
+2022-01-03 16:23:38,853 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-5] select role0_.user_id as user_id1_2_0_, role0_.role_id as role_id2_2_0_, role1_.role_id as role_id1_0_1_, role1_.user_role as user_rol2_0_1_ from users_roles role0_ inner join roles role1_ on role0_.role_id=role1_.role_id where role0_.user_id=?
+2022-01-03 16:23:38,856 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-5] select role0_.user_id as user_id1_2_0_, role0_.role_id as role_id2_2_0_, role1_.role_id as role_id1_0_1_, role1_.user_role as user_rol2_0_1_ from users_roles role0_ inner join roles role1_ on role0_.role_id=role1_.role_id where role0_.user_id=?
+2022-01-03 16:23:38,860 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-5] select role0_.user_id as user_id1_2_0_, role0_.role_id as role_id2_2_0_, role1_.role_id as role_id1_0_1_, role1_.user_role as user_rol2_0_1_ from users_roles role0_ inner join roles role1_ on role0_.role_id=role1_.role_id where role0_.user_id=?
+2022-01-03 16:23:38,863 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-5] select role0_.user_id as user_id1_2_0_, role0_.role_id as role_id2_2_0_, role1_.role_id as role_id1_0_1_, role1_.user_role as user_rol2_0_1_ from users_roles role0_ inner join roles role1_ on role0_.role_id=role1_.role_id where role0_.user_id=?
+2022-01-03 16:23:38,865 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-5] select role0_.user_id as user_id1_2_0_, role0_.role_id as role_id2_2_0_, role1_.role_id as role_id1_0_1_, role1_.user_role as user_rol2_0_1_ from users_roles role0_ inner join roles role1_ on role0_.role_id=role1_.role_id where role0_.user_id=?
+2022-01-03 16:23:38,868 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-5] select role0_.user_id as user_id1_2_0_, role0_.role_id as role_id2_2_0_, role1_.role_id as role_id1_0_1_, role1_.user_role as user_rol2_0_1_ from users_roles role0_ inner join roles role1_ on role0_.role_id=role1_.role_id where role0_.user_id=?
+2022-01-03 16:23:38,869 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-5] select role0_.user_id as user_id1_2_0_, role0_.role_id as role_id2_2_0_, role1_.role_id as role_id1_0_1_, role1_.user_role as user_rol2_0_1_ from users_roles role0_ inner join roles role1_ on role0_.role_id=role1_.role_id where role0_.user_id=?
+2022-01-03 16:23:38,879 INFO c.s.a.c.ViewStoreController [http-nio-1210-exec-5] after calling Service to fetch list details
+2022-01-03 16:23:57,012 INFO c.s.a.s.RoleConvertor [http-nio-1210-exec-8] before calling role converter
+2022-01-03 16:23:57,014 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-8] select role0_.role_id as role_id1_0_, role0_.user_role as user_rol2_0_ from roles role0_ where role0_.user_role=?
+2022-01-03 16:23:57,018 INFO c.s.a.s.RoleConvertor [http-nio-1210-exec-8] before calling role converter
+2022-01-03 16:23:57,020 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-8] select role0_.role_id as role_id1_0_, role0_.user_role as user_rol2_0_ from roles role0_ where role0_.user_role=?
+2022-01-03 16:23:57,024 INFO c.s.a.s.RoleConvertor [http-nio-1210-exec-8] before calling role converter
+2022-01-03 16:23:57,025 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-8] select role0_.role_id as role_id1_0_, role0_.user_role as user_rol2_0_ from roles role0_ where role0_.user_role=?
+2022-01-03 16:24:01,011 INFO c.s.a.s.SecureUserDetailsServiceImpl [http-nio-1210-exec-2] in  userdetails service
+2022-01-03 16:24:01,013 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-2] select store0_.user_id as user_id1_1_, store0_.email as email2_1_, store0_.localities as localiti3_1_, store0_.name as name4_1_, store0_.password as password5_1_, store0_.phone as phone6_1_, store0_.user_name as user_nam7_1_ from user store0_ where store0_.user_name=?
+2022-01-03 16:24:01,018 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-1210-exec-2] select role0_.user_id as user_id1_2_0_, role0_.role_id as role_id2_2_0_, role1_.role_id as role_id1_0_1_, role1_.user_role as user_rol2_0_1_ from users_roles role0_ inner join roles role1_ on role0_.role_id=role1_.role_id where role0_.user_id=?

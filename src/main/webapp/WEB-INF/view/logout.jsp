@@ -5,7 +5,7 @@
 <html>
 <marquee width="100%" behavior="scroll" bgcolor="#00ffff">
 	Know Your Neighborhood Application </marquee>
-<title>Login success form</title>
+<title>Login</title>
 <body>
 	<%
 	request.getSession().invalidate();

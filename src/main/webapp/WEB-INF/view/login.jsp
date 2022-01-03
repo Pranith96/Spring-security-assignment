@@ -25,9 +25,8 @@
 
 	<h1>Login</h1>
 
-	<form:form modelAttribute="store"
-		action="../../store/login/check" method="post"
-		onsubmit="return validateform()">
+	<form:form modelAttribute="store" action="../../store/login/check"
+		method="post" onsubmit="return validateform()">
 		<table>
 			<tr>
 				<td><label class="label">User Name:</label></td>
@@ -41,10 +40,15 @@
 				<td><input type="submit" value="submit" /></td>
 			</tr>
 			<tr>
-				<td><input type="reset" style="float: right"></input></td>
+				<td><input type="reset" style="float: left"></input></td>
 			</tr>
 		</table>
 	</form:form>
-
+	<form align='left'
+		action='http://localhost:1210/store/registration/page'>
+		<div align='left'>
+			<input type='submit' value='Sign up' />
+		</div>
+	</form>
 </body>
 </html>

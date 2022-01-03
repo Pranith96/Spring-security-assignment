@@ -1,2 +1,12 @@
-2022-01-03 12:22:28,499 INFO c.s.a.s.StoreServiceImpl [main] In service class fetch store
-2022-01-03 12:22:28,551 INFO c.s.a.s.StoreServiceImpl [main] In service class fetch all store
+2022-01-03 15:57:48,900 INFO c.s.a.s.StoreServiceImpl [main] In service class fetch store
+2022-01-03 15:57:48,911 INFO c.s.a.s.StoreServiceImpl [main] In service class save method
+2022-01-03 15:57:48,912 INFO c.s.a.s.StoreServiceImpl [main] In service class fetch all store
+2022-01-03 15:57:48,930 INFO c.s.a.c.AddStoreController [main] before calling Service
+2022-01-03 15:57:48,930 INFO c.s.a.c.AddStoreController [main] After calling Service
+2022-01-03 15:57:48,934 INFO c.s.a.c.ViewStoreController [main] before calling Service to fetch store details by email
+2022-01-03 15:57:48,934 INFO c.s.a.c.ViewStoreController [main] before calling Service to fetch store details by email
+2022-01-03 15:57:48,961 INFO c.s.a.c.ViewStoreController [main] before calling Service to fetch list details
+2022-01-03 15:57:48,961 INFO c.s.a.c.ViewStoreController [main] after calling Service to fetch list details
+2022-01-03 15:57:49,027 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.springbootmvc.a4.Assignment4SpringBootMvcJpadbApplicationTests], using SpringBootContextLoader
+2022-01-03 15:57:49,030 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.springbootmvc.a4.Assignment4SpringBootMvcJpadbApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-03 15:57:49,032 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.springbootmvc.a4.Assignment4SpringBootMvcJpadbApplicationTests]: Assignment4SpringBootMvcJpadbApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
